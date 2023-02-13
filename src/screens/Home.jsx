@@ -4,7 +4,7 @@ import { MovieThumbnail } from "../components/MoveThumbnail";
 import { TrendingBanner } from "../components/TrendingBanner"
 
 export const Home = () => {
-
+    // Emerson Crash
     const [trendingMovieDetails, setTrendingMovieDetails] = useState([]);
     const [topRatedMovies, setTopRatedMovies] = useState([]);
 
