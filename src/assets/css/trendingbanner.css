@@ -1,0 +1,106 @@
+.trending-banner-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trending-banner-container>.banner-holder {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease;
+}
+
+.trending-banner-container>.banner-holder>.banner-item>.banner-movie-details {
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px 60px 20px;
+    color: white;
+    width: 100%;
+    background: linear-gradient(0deg, #000000, transparent);
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-banner-container>.banner-holder>.banner-item>.banner-movie-details>.banner-movie-name {
+    font-weight: 200;
+    letter-spacing: 10px;
+    color: #ffffff8f;
+    font-size: 65px;
+}
+
+.trending-banner-container>.banner-holder>.banner-item>.banner-movie-details>.banner-movie-description {
+    font-weight: 400;
+    color: #ffffff8f;
+}
+
+.trending-banner-container>.banner-holder>.banner-item {
+    display: flex;
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.trending-banner-container>.banner-holder>.banner-item>img {
+    object-fit: cover;
+    object-position: 0 20%;
+}
+
+.trending-banner-container>.dots-holder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.trending-banner-container>.dots-holder>.dots {
+    fill: #666;
+    cursor: pointer;
+}
+
+.trending-banner-container>.dots-holder>.dots.active {
+    fill: #fff;
+}
+
+.trending-banner-container>.dots-holder>.dots>svg {
+    width: 50px;
+    display: flex;
+    height: 50px;
+}
+
+.trending-banner-container>.arrow {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+    z-index: 100;
+}
+
+.trending-banner-container>.arrow.left-arrow {
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+}
+
+.trending-banner-container>.arrow.left-arrow:hover {
+    background: linear-gradient(90deg, #00000070, transparent);
+}
+
+.trending-banner-container>.arrow.right-arrow {
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+}
+
+.trending-banner-container>.arrow.right-arrow:hover {
+    background: linear-gradient(270deg, #00000070, transparent);
+}
+
+.trending-banner-container>.arrow>svg {
+    width: 50px;
+    height: 50px;
+    fill: #ffffff73;
+}

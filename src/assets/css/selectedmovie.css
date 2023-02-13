@@ -1,0 +1,114 @@
+.selected-movie-container {
+    position: relative;
+    display: flex;
+    max-width: 1600px;
+    height: 500px;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+}
+
+.selected-movie-container>.movie-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    padding: 40px;
+    background: linear-gradient(90deg, var(--secondary-color) 0%, var(--secondary-color) 70%, transparent 100%);
+}
+
+.selected-movie-container>.movie-details>.movie-addition-info {
+    display: flex;
+    gap: 20px;
+}
+
+.selected-movie-container>.movie-details>.movie-addition-info>.movie-runtime {
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: .7;
+}
+
+.selected-movie-container>.movie-details>.movie-name {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 8px;
+}
+
+.selected-movie-container>.movie-details>.movie-description {
+    font-size: 18px;
+    display: -webkit-box;
+    width: 75%;
+    font-weight: 500;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    padding-top: 25px;
+    word-spacing: 2px;
+    opacity: .5;
+}
+
+.selected-movie-container>.movie-details>.play-btn {
+    position: relative;
+    display: flex;
+    width: 50px;
+    fill: var(--secondary-color);
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-top: 25px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all .2s ease;
+}
+
+
+.selected-movie-container>.movie-details>.play-btn:after {
+    display: flex;
+    position: absolute;
+    content: 'PLAY MOVIE';
+    top: 50%;
+    left: calc(100% + 20px);
+    font-size: 20px;
+    transform: translateY(-50%);
+    width: 120px;
+    justify-content: center;
+}
+
+.selected-movie-container>.movie-details>.play-btn:hover {
+
+    background: var(--secondary-color);
+    fill: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.selected-movie-container>.movie-banner {
+    width: 70%;
+    display: flex;
+    margin-left: auto;
+}
+
+.selected-movie-container>.movie-banner>img {
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    .selected-movie-container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .selected-movie-container>.movie-details {
+        position: relative;
+        width: 100%;
+        transition: width .5s ease;
+    }
+
+    .selected-movie-container>.movie-details>.movie-description {
+        width: 100%;
+    }
+
+    .selected-movie-container>.movie-banner {
+        width: 100%;
+    }
+}

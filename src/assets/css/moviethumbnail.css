@@ -1,0 +1,116 @@
+.movie-thumbnail-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    transition: all 1s ease;
+}
+
+.movie-thumbnail-container>.movie-thumbnail-heading {
+    color: #ccc;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.movie-thumbnail-container>.movie-thumbnail-item-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.movie-thumbnail-item {
+    position: relative;
+    box-shadow: 5px 5px 15px -2px #18181894;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform .5s ease;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+.movie-thumbnail-item:hover {
+    transform: translateY(-10px);
+    border: 3px solid white;
+    z-index: 200;
+}
+
+
+.movie-thumbnail-item:hover>.movie-details {
+    opacity: 1;
+}
+
+.movie-thumbnail-item>.movie-poster {
+    transition: all .5s ease;
+}
+
+.movie-thumbnail-item:hover>.movie-poster {
+    max-height: 400px;
+    object-fit: contain;
+    object-position: top;
+}
+
+
+
+.movie-thumbnail-item>.movie-poster {
+    object-fit: cover;
+}
+
+.movie-thumbnail-item>.movie-details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    color: #fff;
+    background: transparent;
+    padding: 5px 10px;
+    overflow: hidden;
+    z-index: 200;
+    top: -40px;
+}
+
+.movie-thumbnail-item>.movie-details>.movie-name {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.movie-thumbnail-item>.movie-details>.movie-description {
+    font-size: 10px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    opacity: .5;
+    padding-top: 3px;
+}
+
+.movie-thumbnail-item>.movie-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    opacity: 0;
+    border-radius: 50%;
+    z-index: 200;
+}
+
+.movie-thumbnail-item:hover>.movie-play-btn {
+    opacity: 1;
+}
+
+.movie-thumbnail-item>.movie-play-btn>svg {}
+
+.movie-thumbnail-item:hover>.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #181818;
+    opacity: .7;
+}
